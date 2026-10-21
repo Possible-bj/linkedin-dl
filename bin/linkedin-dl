@@ -1,0 +1,4 @@
+#!/bin/sh
+# Launcher: runs the package from this project folder (standard library only, no venv).
+PROJECT="$(cd "$(dirname "$(readlink -f "$0")")/.." && pwd)"
+PYTHONPATH="$PROJECT" exec python3 -m linkedin_dl "$@"
